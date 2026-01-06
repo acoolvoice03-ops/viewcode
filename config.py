@@ -47,7 +47,7 @@ STRING5 = os.getenv("STRING_SESSION5", None)
 AUTO_LEAVING_ASSISTANT = bool(os.getenv("AUTO_LEAVING_ASSISTANT", False))
 START_STICKER_ENABLED = bool(os.getenv("START_STICKER_ENABLED", "True").lower() in ["true", "1", "yes"])
 
-START_IMG_URL = os.getenv("START_IMG_URL", "https://files.catbox.moe/7q8bfg.jpg")
+START_IMG_URL = os.getenv("START_IMG_URL","https://radare.arzfun.com/api/tg/photo?id=AgACAgQAAxkBAAELw1FpWkepKvAo-sYBD_cfcBWBLlBw0QACFAtrG1BMjFK0V-s-6OwaxQEAAwIAA3gAAzgE")
 PING_IMG_URL = "https://files.catbox.moe/eehxb4.jpg"
 PLAYLIST_IMG_URL = "https://files.catbox.moe/eehxb4.jpg"
 STATS_IMG_URL = "https://files.catbox.moe/eehxb4.jpg"
