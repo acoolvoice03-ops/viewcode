@@ -18,7 +18,9 @@
 #
 # Contact for permissions:
 # Email: badboy809075@gmail.com
-
+import threading
+from web import app
+import os
 import webserver   # <-- ADD THIS LINE
 import asyncio
 import importlib
@@ -32,7 +34,15 @@ from ShrutiMusic.misc import sudo
 from ShrutiMusic.plugins import ALL_MODULES
 from ShrutiMusic.utils.database import get_banned_users, get_gbanned
 from config import BANNED_USERS
+def run_web():
+    port = int(os.environ.get("PORT", 10000))
+    app.run(host="0.0.0.0", port=port)
 
+threading.Thread(target=run_web).start()
+
+# ↓ start your bot normally below
+from ShrutiMusic import app as bot
+bot.run()
 # Bot Commands List
 COMMANDS = [
     BotCommand("start", "🚀 Start bot"),
